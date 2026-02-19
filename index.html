@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevConnect - Social Dev Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        nav h2 {
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            color: #ffd369;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-top: 100px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .primary {
+            background: #ffd369;
+            color: black;
+        }
+
+        .secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features */
+        .features {
+            margin-top: 120px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-bottom: 80px;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            width: 300px;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>DevConnect 🚀</h2>
+        <ul>
+            <li>Home</li>
+            <li>Features</li>
+            <li>Community</li>
+            <li>Login</li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Build. Connect. Deploy.</h1>
+        <p>A modern developer social platform powered by DevOps CI/CD automation.</p>
+        <button class="btn primary">Get Started</button>
+        <button class="btn secondary">Learn More</button>
+    </div>
+
+    <div class="features">
+        <div class="card">
+            <h3>⚡ Fast Deployment</h3>
+            <p>Push your code and watch it deploy instantly with CI/CD automation.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔔 Smart Notifications</h3>
+            <p>Real-time Slack alerts keep your team updated on builds and releases.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Cloud Hosted</h3>
+            <p>Automatically deployed to Netlify or Vercel for global access.</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 DevConnect | Built by Jaspreet 💻
+    </footer>
+
+</body>
+</html>
