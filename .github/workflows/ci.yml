@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -25,3 +26,19 @@ jobs:
 
       - name: Build React App
         run: npm run build
+
+      - name: Slack Notification (Success)
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ CI SUCCESS: Build & Tests Passed 🚀"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Slack Notification (Failure)
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"❌ CI FAILED: Build or Tests Failed ⚠️"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+
+        
