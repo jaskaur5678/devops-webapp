@@ -1,4 +1,3 @@
-<h1>DevOps CI/CD Pipeline 🚀 LIVE DEPLOYED</h1>
 import logo from './logo.svg';
 import './App.css';
 
